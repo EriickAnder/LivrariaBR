@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      >
+
+    <h:head>
+        <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+        <link href="css/estilo_listagem.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+        <title></title>
+    </h:head>
+    <h:body class="fundo">
+
+
+
+        <div  id="cabecalho">
+
+            <div class="linhaSup"></div>
+
+            <h:form class="marginMenuTab">   
+                <p:menubar>
+                    <p:submenu label="Venda" >
+                        <p:menuitem value="Nova venda" url="adiciona_venda.xhtml" />
+                        <p:separator />
+                        <p:menuitem value="Listar vendas" url="lista_venda.xhtml" />
+                    </p:submenu>
+
+                    <p:submenu label="Clientes" >
+                        <p:menuitem value="Cadastrar cliente" url="adiciona_cliente.xhtml"/>
+                        <p:separator />
+                        <p:menuitem value="Listar clientes" url="lista_cliente.xhtml"/>
+                    </p:submenu>
+
+                    <p:submenu label="Livros" >
+                        <p:menuitem value="Cadastrar livro" url="adiciona_livro.xhtml" />
+                        <p:separator />
+                        <p:menuitem value="Listar livros" url="lista_livros.xhtml" />
+                    </p:submenu>
+
+                    <p:submenu label="Autores">
+                        <p:menuitem value="Adicionar autor" url="adiciona_autor.xhtml"/>
+                        <p:separator />
+                        <p:menuitem value="Listar autor" url="lista_autor.xhtml"/>
+                    </p:submenu>
+
+                    <p:submenu label="Categoria">
+                        <p:menuitem value="Adicionar categoria" url="adiciona_categoria.xhtml"/>
+                        <p:separator />
+                        <p:menuitem value="Listar categoria" url="lista_categoria.xhtml"/>
+                    </p:submenu>
+
+                    <p:submenu label="Fornecedores">
+                        <p:menuitem value="Adicionar fornecedor" url="adiciona_fornecedor.xhtml"/>
+                        <p:separator />
+                        <p:menuitem value="Listar fornecedores" url="lista_fornecedor.xhtml"/>
+                    </p:submenu>
+                </p:menubar>
+            </h:form>
+
+            <ui:insert name="titulo"> 
+            </ui:insert>
+        </div> 
+
+        <div id="conteudo" class=" fontePadrao" >
+            <ui:insert name="conteudo">
+            </ui:insert>
+        </div>
+
+        <div id="rodape" class="footer">
+
+            LivrariaBR - Todos os direitos reservados
+
+
+            <ui:insert class="footer" name="footer"></ui:insert>
+
+
+        </div>
+    </h:body>
+</html>
+

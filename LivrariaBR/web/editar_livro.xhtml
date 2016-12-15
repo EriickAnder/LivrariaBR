@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Editar Livro</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputText value="Titulo"></h:outputText>
+            <h:inputText value="#{livroBean.vo.titulo}"></h:inputText>
+
+            <br/><br/>
+
+            <h:outputText value="Autor"></h:outputText>
+            <h:inputText value="#{livroBean.vo.autor_id}"></h:inputText>
+
+            <br/><br/>
+
+            <h:outputText value="Quantidade"></h:outputText>
+            <h:inputText value="#{livroBean.vo.quantidade}"></h:inputText>
+
+            <br/><br/>
+
+            <h:outputText value="Lançamento"></h:outputText>
+            <h:inputText value="#{livroBean.vo.lancamento}"></h:inputText>
+            
+             <br/><br/>
+
+            <h:outputText value="Categoria"></h:outputText>
+            <h:inputText value="#{livroBean.vo.categoria}"></h:inputText>
+
+            <br/><br/>
+
+            <h:outputText value="Valor de entrada"></h:outputText>
+            <h:inputText value="#{livroBean.vo.valor_entrada}"></h:inputText>
+
+            <br/><br/>
+
+            <h:outputText value="Preço"></h:outputText>
+            <h:inputText value="#{livroBean.vo.preco}"></h:inputText>
+
+            <br/><br/>
+
+            <h:outputText value="Fornecedor"></h:outputText>
+            <h:inputText value="#{livroBean.vo.fornecedor_id}"></h:inputText>
+
+            <br/><br/>
+
+            <h:outputText value="Breve descrição"></h:outputText>
+            <h:inputText value="#{livroBean.vo.descricao}"></h:inputText>
+
+            <br/><br/>
+            <h:commandButton value="Atualiza" action="#{livroBean.atualiza_livro()}"></h:commandButton>
+            <h:commandButton value="Cancelar" action="lista_livros?faces-redirect=true"></h:commandButton>
+            
+    </h:form>
+</h:body>
+</html>
+

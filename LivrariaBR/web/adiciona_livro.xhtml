@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+
+        <link href="css/estilo.css" rel="stylesheet"  ></link>
+        <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+
+        <title>Adiciona Livro</title>
+    </h:head>
+    <ui:composition template="_template.xhtml" class="">
+
+        <ui:define name="titulo"> </ui:define>
+
+        <ui:define name="conteudo" class="">
+            <div class="magermDivTitulo   ">
+                <h:form >
+                    <p:fieldset legend="Adicionar Livro" class="tamFildset">
+
+                        <p:panelGrid columns="2" class="paddingPanelGrid" >
+
+
+                            <p:outputLabel for="titulo" value="Titulo"></p:outputLabel>
+                            <p:inputText  id="titulo" value="#{livroBean.vo.titulo}" maxlength="20" required="true"></p:inputText>
+
+
+
+
+                            <p:outputLabel for="codAutor"  value="Codigo Autor"  ></p:outputLabel>
+                            <p:inputText id="codAutor" value="#{livroBean.vo.autor_id}" required="true" ></p:inputText>
+
+
+
+                            <p:outputLabel for="quantidade" value="Quantidade"  ></p:outputLabel>
+                            <p:inputText id="quantidade" value="#{livroBean.vo.quantidade}" required="true"></p:inputText>
+
+
+
+                            <p:outputLabel for="lancamento" value="Lançamento"  ></p:outputLabel>
+                            <p:inputText id="lancamento" value="#{livroBean.vo.lancamento}"  required="true"/>
+
+
+
+                            <p:outputLabel for="categoria"  value="Categoria"  ></p:outputLabel>
+                            <p:inputText  id="categoria"  value="#{livroBean.vo.categoria}" required="true"> </p:inputText>
+
+
+                            <p:outputLabel for="valEntrada" value="Preço de Compra"   ></p:outputLabel>
+                            <p:inputText id="valEntrada"    value="#{livroBean.vo.valor_entrada}" required="true"></p:inputText>
+
+                            <p:outputLabel for="preco" value="Preço de venda"  ></p:outputLabel>
+                            <p:inputText id="preco"  value="#{livroBean.vo.preco}" required="true"></p:inputText>
+
+
+
+                            <p:outputLabel for="codFornecedor" value="Codigo Fornecedor"  ></p:outputLabel>
+                            <p:inputText id="codFornecedor"  value="#{livroBean.vo.fornecedor_id}" required="true"></p:inputText>
+
+                            <p:outputLabel for="desc"  value="Descrição"  ></p:outputLabel>
+                            <p:inputText id="desc"  value="#{livroBean.vo.descricao}" maxlength="20" ></p:inputText>
+
+
+
+                            <p:commandButton class="margembt" update="@form" process="@form"   value="Cadastrar" action="#{livroBean.adiciona_livro()}"></p:commandButton>
+                            <p:commandButton immediate="true" class="margembt" value="Cancelar"  action="lista_livros?faces-redirect=true"></p:commandButton>
+                        </p:panelGrid>
+
+                        <div class="centralizaBotoesPesquisa">
+                            <p:commandButton  immediate="true" class="margembt" value="Pesquisar Autor" action="lista_autor?faces-redirect=true"></p:commandButton>
+                            <p:commandButton immediate="true" class="margembt" value="Pesquisar Categoria" action="lista_categoria?faces-redirect=true"></p:commandButton>
+                            <p:commandButton immediate="true" class="margembt"   value="Pesquisar Fornecedor" action="lista_fornecedor?faces-redirect=true"></p:commandButton>
+                        </div>
+                    </p:fieldset>
+
+                </h:form>
+
+            </div>
+
+        </ui:define>
+
+        <ui:define name="footer"></ui:define>
+    </ui:composition>
+
+</html>
+

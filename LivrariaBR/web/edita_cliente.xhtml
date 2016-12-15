@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link href="css/estilo.css" rel="stylesheet"></link>
+
+        <title>Adiciona Cliente</title>
+    </h:head>
+    <h:body>
+        <div class="container ">
+
+            <h:form>
+                 <div class=""> <h:outputText value="ID" ></h:outputText></div>
+                <h:inputText value="#{cliBean.vo.id}" ></h:inputText>
+                <br/><br/>
+                
+                
+                <div class=""> <h:outputText value="Nome do cliente" ></h:outputText></div>
+                <h:inputText value="#{cliBean.vo.nome}" ></h:inputText>
+                <br/><br/>
+
+                <h:outputText value="Sobrenome"></h:outputText>
+                <h:inputText value="#{cliBean.vo.sobrenome}"></h:inputText>
+                <br/><br/>
+                <div>
+                    <h:outputText value="CPF"></h:outputText>
+                    <h:inputText value="#{cliBean.vo.cpf}"></h:inputText>
+                </div>
+                <br/><br/>
+
+                <div>
+                    <h:outputText value="Data de Nascimento"></h:outputText>
+                    <h:inputText value="#{cliBean.vo.nascimento}"></h:inputText>
+                </div>
+
+
+                <h:commandButton styleClass="btConfirmar" value="Adicionar" action="#{cliBean.atualiza()}"></h:commandButton>
+                &nbsp;
+                <h:commandButton styleClass="btCancelar" value="Cancelar" action="lista_cliente?faces-redirect=true"></h:commandButton>
+
+            </h:form>
+        </div>
+    </h:body>
+</html>
+

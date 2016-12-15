@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"     
+      >
+    <h:head>
+        <script type="text/javascript" src="resources/js/CalculaValorTotal.js" />
+        <link href="css/estilo.css" rel="stylesheet"  ></link>
+        <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+
+        <title>Concluir venda</title>
+    </h:head>
+    <ui:composition template="_template.xhtml" class="">
+
+        <ui:define name="titulo"> </ui:define>
+
+        <ui:define name="conteudo">
+            <div class="container">
+                <h:form>
+                    <p:fieldset legend="Informações de Venda">
+                        <p:panelGrid columns="5" class="paddingPanelGrid">
+                            <p:outputLabel  value="Codigo do livro:"></p:outputLabel>
+                            <p:inputText id="txtCodigoLivro" value="#{vendaBean.voLivro.id}" required="true" ></p:inputText>
+                            <h:commandButton value="Pesquisar Livro" action="#{vendaBean.recuperaLivro()}">
+                                <f:ajax execute="txtCodigoLivro" render="txtTituloLivro"></f:ajax>
+                                <f:ajax execute="txtCodigoLivro" render="txtPrecoLivro"></f:ajax>
+                                <f:ajax execute="txtCodigoLivro"  render="txtQuantidade"></f:ajax>
+                                <f:ajax execute="txtCodigoLivro"  render="txtTotal"></f:ajax>
+                            </h:commandButton> 
+
+                            <p:outputLabel id="txtTituloLivro" value="Titulo:#{vendaBean.voLivro.titulo}"  ></p:outputLabel>
+                        </p:panelGrid>
+
+                        <p:panelGrid columns="6" class="paddingPanelGrid">
+                            <p:outputLabel id="txtPrecoLivro" value="Preço:R$ #{vendaBean.voLivro.preco}" ></p:outputLabel>
+                            <p:outputLabel value="Quantidade:"></p:outputLabel>
+                            <p:inputText id="txtQuantidade" value="#{vendaBean.voLivro.quantidade}"></p:inputText>
+                            <h:commandButton value="Confirmar Livro" action="#{vendaBean.calculaTotal()}">
+                                <f:ajax execute="txtQuantidade" render="txtTotal"></f:ajax>
+                            </h:commandButton>                              
+                            <p:outputLabel id="txtTotal"  value="Total: R$#{vendaBean.voLivro.precoTotal}"></p:outputLabel> 
+                        </p:panelGrid>
+                    </p:fieldset>
+
+                    <p:fieldset legend="Informações do cliente">
+                        <p:panelGrid columns="5" class="paddingPanelGrid">
+                            <p:outputLabel value="CPF do Cliente:"></p:outputLabel>
+                            <p:inputText id="txtCPF" value="#{vendaBean.voCli.cpf}"></p:inputText>
+                            <h:commandButton value="Pesquisar Cliente" action="#{vendaBean.recuperaCliente()}">
+                                <f:ajax execute="txtCPF" render="txtNome"></f:ajax>                                
+                            </h:commandButton>
+                            <p:outputLabel id="txtNome" value=" Nome do cliente: #{vendaBean.voCli.nome}  #{vendaBean.voCli.sobrenome}" ></p:outputLabel>
+                        </p:panelGrid>
+                    </p:fieldset>
+
+                    <p:fieldset legend="Informações de pagamento">
+                        <p:panelGrid columns="4" class="paddingPanelGrid">
+                            <p:outputLabel value="Informe quantidade de parcelas:"></p:outputLabel>
+                            <p:inputText value="#{vendaBean.voVenda.parcelamento}"></p:inputText>
+                            <p:outputLabel value="Total:"></p:outputLabel>
+                            <p:outputLabel value="R$: #{vendaBean.voVenda.quantidade}"></p:outputLabel> 
+                            <p:outputLabel value="Tipo de Pagamento:"></p:outputLabel>
+                            <h:selectOneRadio value="">
+                                <f:selectItem itemValue="1" itemLabel="Boleto" />
+                                <f:selectItem itemValue="2" itemLabel="Cartão" />	   			
+                            </h:selectOneRadio>	
+                        </p:panelGrid>
+                    </p:fieldset>
+
+                    <p:panelGrid columns="2" class="paddingPanelGrid">
+                        <p:commandButton value="Confirmar" process="@form" update="@form" ></p:commandButton>
+                        <p:commandButton value="Cancelar" process="@form" update="@form" ></p:commandButton>
+                    </p:panelGrid>
+
+                </h:form>
+            </div>
+        </ui:define>
+
+        <ui:define name="footer"></ui:define>
+
+    </ui:composition>
+</html>
+

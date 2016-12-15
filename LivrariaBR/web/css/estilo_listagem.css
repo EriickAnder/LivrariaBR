@@ -1,0 +1,100 @@
+.fontePadrao{
+    font-family: "Roboto Slab", serif;
+    margin-bottom: 5%;
+
+}
+
+.LinkAdicionar{
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 10px;
+    background: url(../resources/img/footer_img.PNG );
+    text-align: right;
+    color: white;
+
+}
+
+.LinkAdicionar:hover{
+
+    color: white;
+    text-decoration: none;
+}
+
+
+.centraliza{
+    /* Centralizar tabela */
+    padding-left: auto;
+    padding-right: auto;
+    margin-top: 20px;
+}
+
+
+.tamanhoBotao{
+    width: 100%;
+    padding: auto;
+    margin-bottom: 5px;
+}
+
+.tamanhoBtBusca{
+    margin-top: 10px;
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+.tamanhoCampo{
+    margin-right: 100px;
+}
+
+.tituloTabela1{
+    /* Destaca o titulo das colunas*/
+    text-align: center;
+}
+
+.botoes{
+    /* Padding nos botoes */
+    height: 30px;
+    margin-left:  3%;
+}
+
+.formulario{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+
+.formularioBusca{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 5px;
+
+}
+
+.row1 {
+    border: 1px solid black;
+    width:50px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    height: 70px;
+
+}
+.row2{
+    font-family: "Roboto Slab", serif; 
+    color: #000000;
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+    background: url(../resources/img/fundo_transparente1.png);
+    height: 70px;
+    padding-left: auto;
+    margin-right: 200px;
+
+}

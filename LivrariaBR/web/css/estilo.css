@@ -1,0 +1,220 @@
+
+.tituloPagina{
+    font-family: "Roboto Slab", serif; 
+    color: #000000;
+    font-size: 10px;  
+    margin-bottom: 20px;
+
+
+}
+.font_titulo{
+
+    font-size: 5em;
+}
+
+
+body{
+    overflow: visible;
+
+
+}
+
+.fundo{
+
+    background: url(../resources/img/livros.png);
+}
+
+.footer {
+    clear: both;
+    position: fixed;
+    
+    bottom:0;
+    width:100%;
+    border: 1px solid gray;
+    height: 40px;;
+    background: url(../resources/img/footer_img.PNG );
+    color: white;
+    text-align: center;
+    font-family: "Roboto Slab", serif; 
+}
+
+.footerIcones{
+    margin-left: 30px;
+}
+
+.marginMenuTab{
+    
+    margin-bottom: 10px;
+}
+
+
+.corFundo{
+
+    background: white;
+
+}
+
+.fundoTransparente{
+
+    margin-bottom: 20px;
+
+}
+
+.bordaTxt{
+    border-radius: 0px 10px 10px 0px;
+    font-size: 15px;
+
+}
+
+
+.tamanhoInput{
+
+    width: 120px;
+
+}
+
+.margembt{
+    margin: 10px;
+    padding-left: auto;
+    padding-right:auto;
+}
+
+.centralizaBotoesPesquisa{
+
+    text-align: center;
+
+}
+.paddingPanelGrid{
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.smagermInput{
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+
+}
+
+.magermDivTitulo{
+    margin-top: 30px;
+}
+
+
+.csamposForm{
+    padding-left: auto;
+    padding-right: auto;
+
+
+}
+
+
+.tituloCampo{
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid gray;
+    padding: 4px;
+    border-right:none;
+    background: white;
+    font-family: "Roboto Slab", serif;
+    font-size: 17px;
+}
+
+.btConfirmar{
+    color: white;
+    background-color: #4169E1;
+    font-family: "Roboto Slab", serif; 
+}
+
+.btCancelar{
+    color: white;
+    background-color: #FF3030;
+    font-family: "Roboto Slab", serif; 
+}
+
+
+/* LINKS */
+
+a:active{
+    text-decoration:none;
+    color: #87CEFA;
+}
+
+.linkBusca:hover{
+    text-decoration: none;
+}
+
+.linkBusca{
+    text-decoration: none;
+    border-radius:10px;
+    background: white;
+    padding: 8px;
+    margin-left: 10px;
+    color:#000000;
+}
+
+
+/* Container Menu  */
+.linhaSup{
+    width: 100%;
+    background: #3CB371;
+    height: 5px;
+
+
+}
+
+.tamFildset{
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.containerMenu{
+
+    display: block;
+    font-family: "Roboto Slab", serif; 
+    width: 100%;
+    height: 100px;
+    background: url(../resources/img/fundo_transparente1.png);
+    padding-top: 20px;
+    text-decoration: none;
+    margin-bottom: 30px;
+
+}
+
+.opcMenu{
+    color:white;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-left:02px;
+    margin-right: auto; 
+    text-decoration: none;
+    font-size: 20px
+
+}
+.opcMenu:last-child{
+
+    border-right: none;
+    padding-left: 20px;
+}
+.logo{
+    color: white;
+    margin-right:30%;
+    margin-left: 70px;
+    font-size: 30px;
+}
+
+
+
+.opcMenu:hover{
+    border-radius: 10px;
+    background: white;
+    text-decoration: none;
+
+}
+
+
