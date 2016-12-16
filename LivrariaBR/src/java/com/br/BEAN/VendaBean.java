@@ -120,4 +120,9 @@ public class VendaBean {
         }
         
     }
+    
+    public void formaPagamento(){
+     
+    
+    }
 }
