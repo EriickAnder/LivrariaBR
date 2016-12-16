@@ -5,6 +5,7 @@ public class VendaVO {
     private int quantidade;
     private int parcelamento;
     private float precoTotal;
+    private String formaPagamento;
     private String data = "25/10/2016";
     private String hora = "09:45 pm";
     private String tipoPgtm = "Boleto | Cartão | PayPal";
@@ -55,6 +56,14 @@ public class VendaVO {
 
     public void setPrecoTotal(float precoTotal) {
         this.precoTotal = precoTotal;
+    }
+
+    public String getFormaPagamento() {
+        return formaPagamento;
+    }
+
+    public void setFormaPagamento(String formaPagamento) {
+        this.formaPagamento = formaPagamento;
     }
 
 }
