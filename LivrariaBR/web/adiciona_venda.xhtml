@@ -63,10 +63,11 @@
                             <p:outputLabel value="Total:"></p:outputLabel>
                             <p:outputLabel value="R$: #{vendaBean.voVenda.quantidade}"></p:outputLabel> 
                             <p:outputLabel value="Tipo de Pagamento:"></p:outputLabel>
-                            <h:selectOneRadio value="">
-                                <f:selectItem itemValue="1" itemLabel="Boleto" />
-                                <f:selectItem itemValue="2" itemLabel="Cartão" />	   			
-                            </h:selectOneRadio>	
+                            <h:selectOneMenu value="#{vendaBean.voVenda.formaPagamento}">
+                                <f:selectItem itemValue="Boleto" itemLabel="Boleto" />
+                                <f:selectItem itemValue="Cartão" itemLabel="Cartão" />	   			
+                            </h:selectOneMenu>
+
                         </p:panelGrid>
                     </p:fieldset>
 
