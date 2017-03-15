@@ -63,10 +63,13 @@
                             <p:outputLabel value="Total:"></p:outputLabel>
                             <p:outputLabel value="R$: #{vendaBean.voVenda.quantidade}"></p:outputLabel> 
                             <p:outputLabel value="Tipo de Pagamento:"></p:outputLabel>
-                            <h:selectOneMenu value="#{vendaBean.voVenda.formaPagamento}">
-                                <f:selectItem itemValue="Boleto" itemLabel="Boleto" />
+                            <h:selectOneMenu  id="txt" value="#{vendaBean.voVenda.formaPagamento}">
+                                <f:selectItem  itemValue="Boleto" itemLabel="Boleto" />
                                 <f:selectItem itemValue="Cartão" itemLabel="Cartão" />	   			
                             </h:selectOneMenu>
+                            <p:commandButton value="Confirmar" action="#{vendaBean.formaPagamento()}">
+                                <f:ajax execute="txt" render="txt"></f:ajax>
+                            </p:commandButton>
 
                         </p:panelGrid>
                     </p:fieldset>

@@ -63,7 +63,7 @@ public class ClienteDAO {
     }
 
     public List<ClienteVO> lista() throws ClassNotFoundException, SQLException {
-        String SQL = "Select * from cliente ";
+        String SQL = "Select * from cliente";
 
         PreparedStatement pstm = getConn().prepareStatement(SQL);
         ResultSet rs = pstm.executeQuery();

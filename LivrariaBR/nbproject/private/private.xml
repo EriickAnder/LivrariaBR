@@ -3,8 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Erick/Dropbox/projetosJSF/LivrariaBR/src/java/com/br/BEAN/VendaBean.java</file>
-            <file>file:/C:/Users/Erick/Dropbox/projetosJSF/LivrariaBR/web/adiciona_venda.xhtml</file>
+            <file>file:/C:/Users/Erick/Dropbox/projetosJSF/LivrariaBR/src/java/com/br/DAO/AutorDAO.java</file>
+            <file>file:/C:/Users/Erick/Dropbox/projetosJSF/LivrariaBR/src/java/com/br/BEAN/AutorBean.java</file>
+            <file>file:/C:/Users/Erick/Dropbox/projetosJSF/LivrariaBR/web/adiciona_autor.xhtml</file>
         </group>
     </open-files>
 </project-private>
